@@ -17,8 +17,9 @@ Import escalation and secrets content, then generate ambiguous clues, overheard 
 - Clue 3: {clue_3}
 
 ## Evaluation:
-- Are clues subtle yet fair?
-- What is one suggestion to make a clue more intriguing?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines its subtlety.
+3. Provide two specific, actionable revisions to make these clues more intriguing and fair.
 ~~~
 
 ---

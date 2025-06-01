@@ -18,8 +18,9 @@ Import the core incident and character profiles, then map out alliances, rivalri
 - …
 
 ## Evaluation:
-- Are the relationship ties clear and tension-filled?
-- What is one suggestion to raise stakes?
+1. Identify the single biggest flaw or weak point in the above relationships and dynamics.
+2. Pinpoint any inconsistency or cliché that undermines tension.
+3. Provide two concrete, actionable revisions to heighten stakes and emotional resonance.
 ~~~
 
 ---

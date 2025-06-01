@@ -15,8 +15,9 @@ Import confrontations and clues content, then unveil the true antagonist or twis
 The revelation is: {revelation}
 
 ## Evaluation:
-- Is the twist surprising yet coherent?
-- What is one suggestion to enhance its plausibility?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines its coherence.
+3. Provide two specific, actionable revisions to strengthen believability and impact.
 ~~~
 
 ---

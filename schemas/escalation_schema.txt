@@ -16,8 +16,9 @@ Import relationship dynamics and secrets, then depict how suspicion, manipulatio
 - Key Tension: {escalation_tension}
 
 ## Evaluation:
-- Does this build believable tension?
-- What is one suggestion to heighten suspense?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines its tension.
+3. Provide two specific, actionable revisions to heighten suspense and coherence.
 ~~~
 
 ---

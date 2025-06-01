@@ -42,8 +42,9 @@ Import the workplace setting and core incident, then generate four key character
    Key Vulnerability: {character_vulnerability_4}
 
 ## Evaluation:
-- Are these character motivations believable and distinct?
-- What is one suggestion to diversify their profiles?
+1. Identify the single biggest flaw or weak point in the above character profiles.
+2. Pinpoint any stereotype or cliché that weakens their individuality.
+3. Provide two concrete, actionable revisions to make these profiles more distinct and compelling.
 ~~~
 
 ---

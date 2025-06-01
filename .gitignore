@@ -8,6 +8,7 @@ env/
 
 # Generated Content
 content/
+content/_archive/
 
 # System Files
 .DS_Store

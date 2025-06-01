@@ -12,8 +12,9 @@ Generate a compelling workplace setting for a psychological thriller. The enviro
 The setting is: {setting}
 
 ## Evaluation:
-- Is this setting believable and tense?
-- What is one suggestion to improve it?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines tension.
+3. Provide two concrete, actionable revisions to strengthen the narrative.
 ~~~
 
 ---

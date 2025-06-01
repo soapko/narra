@@ -16,8 +16,9 @@ Import clues and escalation content, then generate key confrontations, arguments
 - Confrontation 2: {scene_2}
 
 ## Evaluation:
-- Are the confrontations emotionally impactful?
-- What is one suggestion to intensify the conflict?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines its emotional impact.
+3. Provide two specific, actionable revisions to intensify the conflict and character dynamics.
 ~~~
 
 ---

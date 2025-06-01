@@ -14,8 +14,9 @@ Import the workplace setting and generate the triggering psychological event or 
 The core incident is: {incident}
 
 ## Evaluation:
-- Is this incident surprising and clear?
-- What is one suggestion to make it more impactful?
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines its impact.
+3. Provide two specific, actionable revisions to heighten suspense and clarity.
 ~~~
 
 ---
