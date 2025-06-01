@@ -1,0 +1,39 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Aftermath and Fallout:
+
+Import revelation content, then describe the psychological and professional fallout for each character after the truth emerges.
+
+@include {revelation_content}
+
+## Use this schema:
+~~~
+## Aftermath and Fallout:
+- {C01}: {aftermath_C01}
+- {C02}: {aftermath_C02}
+- {C03}: {aftermath_C03}
+- {C04}: {aftermath_C04}
+
+## Evaluation:
+- Is the fallout plausible and satisfying?
+- What is one suggestion to deepen the emotional impact?
+~~~
+
+---
+
+### Example:
+~~~
+@include {revelation_content}
+
+## Aftermath and Fallout:
+- C01: Publicly humiliated, struggles to regain trust but discovers inner resilience.
+- C02: Career derailed by association, contemplates whistleblowing to salvage reputation.
+- C03: Forced to confront credentials fraud, faces ethical board review.
+- C04: Promoted to interim CEO but haunted by guilt and paranoia.
+
+## Evaluation:
+- Plausibility and satisfaction: Outcomes feel true to characters and events.
+- Suggestion: Show a moment of solidarity between characters to hint at healing.
+~~~

@@ -182,7 +182,7 @@ class ContentGenerationTool:
         self.storage_manager = DriveStorageManager(base_drive_path)
         self.schema_manager = SchemaManager(base_drive_path)
         self.executor = SchemaExecutor(self.storage_manager, self.schema_manager)
-        self.execution_order = ["setting_schema","characters_schema","reports_schema","locations_schema","evidence_schema","thecrime_schema","newevidence_schema", "overview_schema","interrogate_schema","solve1_schema","twist1_schema","all_evidence_schema","solve2_schema","solve3_schema"]
+        self.execution_order = ["setting_schema","core_incident_schema","characters_schema","relationships_schema","secrets_schema","escalation_schema","clues_schema","confrontations_schema","revelation_schema","aftermath_schema"]
 
 
     def run_from_schema(self, start_label):

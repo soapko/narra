@@ -1,0 +1,37 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Confrontations and Conflicts:
+
+Import clues and escalation content, then generate key confrontations, arguments, or breakdowns among characters.
+
+@include {clues_content}
+@include {escalation_content}
+
+## Use this schema:
+~~~
+## Confrontations and Conflicts:
+- Confrontation 1: {scene_1}
+- Confrontation 2: {scene_2}
+
+## Evaluation:
+- Are the confrontations emotionally impactful?
+- What is one suggestion to intensify the conflict?
+~~~
+
+---
+
+### Example:
+~~~
+@include {clues_content}
+@include {escalation_content}
+
+## Confrontations and Conflicts:
+- Confrontation 1: C01 accuses C02 during a team meeting in front of the CEO.
+- Confrontation 2: C03 corners C04 in the break room over leaked documents.
+
+## Evaluation:
+- Impact: Both scenes heighten paranoia and distrust.
+- Suggestion: Add environmental detail (flickering lights) to amplify tension.
+~~~

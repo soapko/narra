@@ -1,0 +1,35 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Revelation and Twist:
+
+Import confrontations and clues content, then unveil the true antagonist or twist that explains the core incident and conflicts.
+
+@include {confrontations_content}
+@include {clues_content}
+
+## Use this schema:
+~~~
+## Revelation and Twist:
+The revelation is: {revelation}
+
+## Evaluation:
+- Is the twist surprising yet coherent?
+- What is one suggestion to enhance its plausibility?
+~~~
+
+---
+
+### Example:
+~~~
+@include {confrontations_content}
+@include {clues_content}
+
+## Revelation and Twist:
+The revelation is: C04 orchestrated the whistleblower email to distract from her own embezzlement scheme.
+
+## Evaluation:
+- Surprise and coherence: Twist fits motives and clues.
+- Suggestion: Link C04's scheme to the fake alias noted in clues for cohesion.
+~~~

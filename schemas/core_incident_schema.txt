@@ -1,0 +1,33 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# The Core Incident:
+
+Import the workplace setting and generate the triggering psychological event or catalyst. This incident should be surprising but plausible within the established setting.
+
+@include {setting_content}
+
+## Use this schema:
+~~~
+## Setup - Core Incident:
+The core incident is: {incident}
+
+## Evaluation:
+- Is this incident surprising and clear?
+- What is one suggestion to make it more impactful?
+~~~
+
+---
+
+### Example:
+~~~
+@include {setting_content}
+
+## Setup - Core Incident:
+The core incident is: A whispered email circulates naming a beloved founder as embezzling millions.
+
+## Evaluation:
+- Surprise and clarity: The twist is shocking and believable given surveillance rumors.
+- Suggestion: Describe how the sender conceals their identity to heighten paranoia.
+~~~

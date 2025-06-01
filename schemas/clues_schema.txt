@@ -1,0 +1,39 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Clues and Breadcrumbs:
+
+Import escalation and secrets content, then generate ambiguous clues, overheard fragments, or digital breadcrumbs that hint at hidden truths.
+
+@include {escalation_content}
+@include {secrets_content}
+
+## Use this schema:
+~~~
+## Clues and Breadcrumbs:
+- Clue 1: {clue_1}
+- Clue 2: {clue_2}
+- Clue 3: {clue_3}
+
+## Evaluation:
+- Are clues subtle yet fair?
+- What is one suggestion to make a clue more intriguing?
+~~~
+
+---
+
+### Example:
+~~~
+@include {escalation_content}
+@include {secrets_content}
+
+## Clues and Breadcrumbs:
+- Clue 1: A deleted log entry showing late-night access to HR files.
+- Clue 2: A meeting room reservation under a fake alias.
+- Clue 3: An anonymous sticky note with a warning phrase.
+
+## Evaluation:
+- Subtlety and fairness: Clues feel realistic and require inference.
+- Suggestion: Tie the fake alias to a known project code name for depth.
+~~~

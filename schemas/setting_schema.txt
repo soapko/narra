@@ -1,30 +1,29 @@
 # Metadata
-Max Tokens: 32
-Temperature: 0.9
+Max Tokens: 512
+Temperature: 0.8
 
-# The Setting:
+# The Workplace Setting:
 
-Generate an exciting setting (on earth) similar to these options:
-⁃ Remote, scientific research station in the Antarctic tundra
-⁃ Bustling, exotic spice market in Marrakech, Morocco
-⁃ Elegant, art deco style luxury train traversing across Europe
-⁃ Secluded, haunted inn located in the Scottish Highlands
-
-These settings have already been used, so avoid them:
-- Grand, centuries-old castle nestled in the misty forests of Transylvania
-
+Generate a compelling workplace setting for a psychological thriller. The environment should be realistic but contain inherent tensions, power dynamics, and opportunities for paranoia.
 
 ## Use this schema:
 ~~~
-## Setup - The Setting:
+## Setup - Workplace Setting:
 The setting is: {setting}
+
+## Evaluation:
+- Is this setting believable and tense?
+- What is one suggestion to improve it?
 ~~~
 
 ---
 
 ### Example:
-
 ~~~
-## Setup - The Setting:
-The setting is: Lavish cruise ship sailing through the Bermuda Triangle
+## Setup - Workplace Setting:
+The setting is: A high-pressure tech startup with glass-walled offices, ambient surveillance cameras, and whispered rumors about product failures leaking to the press.
+
+## Evaluation:
+- Believability and tension: High tension; surveillance creates realistic unease.
+- Suggestion: Add detail about how employees cope with constant monitoring.
 ~~~

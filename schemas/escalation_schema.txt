@@ -1,0 +1,37 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Escalation of Paranoia:
+
+Import relationship dynamics and secrets, then depict how suspicion, manipulation, and paranoia escalate among characters.
+
+@include {relationships_content}
+@include {secrets_content}
+
+## Use this schema:
+~~~
+## Escalation of Paranoia:
+- Scene: {escalation_scene}
+- Key Tension: {escalation_tension}
+
+## Evaluation:
+- Does this build believable tension?
+- What is one suggestion to heighten suspense?
+~~~
+
+---
+
+### Example:
+~~~
+@include {relationships_content}
+@include {secrets_content}
+
+## Escalation of Paranoia:
+- Scene: Employees notice anonymous sticky notes accusing each other of betrayal.
+- Key Tension: Rumors spread faster than facts, undermining trust.
+
+## Evaluation:
+- Tension: Strong feeling of mistrust and fear.
+- Suggestion: Introduce a malfunctioning security camera to deepen uncertainty.
+~~~

@@ -1,0 +1,40 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Relationships and Dynamics:
+
+Import the core incident and character profiles, then map out alliances, rivalries, and hidden connections among key characters.
+
+@include {core_incident_content}
+@include {characters_content}
+
+## Use this schema:
+~~~
+## Relationships and Dynamics:
+- {C01} ↔ {C02}: {description}
+- {C01} ↔ {C03}: {description}
+- {C02} ↔ {C04}: {description}
+- …
+
+## Evaluation:
+- Are the relationship ties clear and tension-filled?
+- What is one suggestion to raise stakes?
+~~~
+
+---
+
+### Example:
+~~~
+@include {core_incident_content}
+@include {characters_content}
+
+## Relationships and Dynamics:
+- C01 ↔ C02: Mentor-protégé but growing resentment over uncredited work.
+- C03 ↔ C04: Office gossip partners feeding each other rumors.
+- C02 ↔ C04: Secret alliance to undermine C01’s project.
+
+## Evaluation:
+- Clarity and tension: Dynamics feel plausible and conflict-rich.
+- Suggestion: Add a hidden familial tie to complicate loyalties.
+~~~
