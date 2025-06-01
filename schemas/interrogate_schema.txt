@@ -1,0 +1,54 @@
+# Metadata
+Max Tokens: 4096
+Temperature: 0.7
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {reports_content}
+@include {locations_content}
+@include {evidence_content}
+@include {thecrime_content}
+@include {newevidence_content}
+
+## Questioning Suspects
+
+For each suspect, generate three Q&As:
+- The first question explores past event where victim foiled an opportunity for the suspect. The follow-ups uncover their current opportunities.
+- The second question explores their vulnerability, desires, and fears. The follow-ups uncover their catastrophic fears.
+- The third question explores their ability to commit the crime and attempt to get away with it,
+- Probe evidence that puts the suspect at the scene of the crime. 
+- Be forceful with the suspects.
+- Each question will have at least one follow-up Q&A
+- Indicate which evidence (eg E01, etc) is a prerequisite for the question
+- Questions and follow-ups will use a unique ID in the form of Q0# and Q0#.1, Q0#.2, etc for the respective follow-ups.
+- Testimony and follow-ups will use a unique ID in the form of T0# and T0#.1, T0#.2, etc for the respective follow-ups.
+- Each question will also have an update with new investigative evidence that either confirms or conflicts with the testimony.
+
+## Use this schema:
+~~~
+## Questioning Suspects
+
+Suspect: {suspect_name}, {Character ID}
+Q0# ({evidence prerequisite}): {detective_question}
+T0#: {suspect_answers}
+Q0#.1 ({evidence prerequisite}): {detective_follow-up}
+T0#.1: {suspect_answers}
+E0#: {update_on_testimony_evidence}
+~~~
+
+---
+
+### Example:
+~~~
+## Questioning Suspects
+
+Suspect: Caroline White, C01
+Q01.1 (E01): Can you explain why you were encouraging the lead actress to switch agencies despite knowing that she was signed with Giallo's agency?
+T01.1: I was offering her a better deal, it’s business, not personal.
+Q01.2 (E02.1): Does this have anything to do with your desire to regain your position as a top talent agent?
+T01.2: Of course it does. In this business, you have to be ruthless. But that doesn't mean I would kill for it.
+E02.2: Examination of Caroline’s computer reveals that the email was deleted but not sent to the actress.
+…
+~~~

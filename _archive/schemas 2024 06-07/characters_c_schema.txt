@@ -1,0 +1,37 @@
+# Metadata
+Max tokens: 2048
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {mystery_overview_content}
+@include {characters_a_content}
+@include {characters_b_content}
+@include {murder_types}
+
+# Reference schemas
+
+@include {characters_b_schema}
+
+# Add Character conflicts
+Add details to the existing cast of characters.
+
+
+## Use this schema:
+~~~
+## Setup - The Cast of Characters (conflicts):
+
+### Character # name: {cast_name}
+They have conflicts with: {foil_cast_name}
+{cast_name} and {foil_cast_name} have clashed before. Once, when they {past_opportunity}, {foil_cast_name} {foil_gets_in_the_way}, which resulted in {character_name} {character_catastrophe}.
+
+This manifests in their secret habit of {secret_habit} and their outward habit of {noticeable_habit}.
+
+And when at last {opportunity_arises_for_desire}, they fear {foil_name} will {foil_counteraction}, which could catastrophically {character_worst_fear} unless they can remove them from the equation.
+
+If it came to it, they would be a {murderer_type} // Based on The Archetypal Types of Murderers
+
+—
+
+~~~

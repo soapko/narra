@@ -1,0 +1,53 @@
+# Metadata
+Max tokens: 4096
+Temperature: 0.8
+
+## Getting Started
+Every character in a murder mystery is driven by deep-seated motives, shaped by their past experiences, current desires, and the socio-economic environment. These elements combine to push them towards drastic actions under the right circumstances.
+
+General Guidelines:
+- Use inclusive and gender-neutral language.
+- Avoid detective or police characters to focus on interpersonal dynamics.
+- Develop four main characters, each with distinct but interconnected narratives.
+
+## Use this schema:
+~~~
+## Detailed Character Schema:
+
+### Character Profile:
+
+0. {Character ID} // a unique character ID in the format C01, C02, etc
+1. Name: {character_name}
+2. Role/Occupation: {character_role} (Ensure roles are diverse and reflect a range of social standings and influences.)
+3. Age and Demographic Background: {character_age}, {character_background}
+4. Personality Traits: {character_traits} (Include dominant traits that influence decision-making and social interactions.)
+
+### Psychological and Relational Dynamics:
+
+5. Core Motivation: {character_motivation} (What drives their actions? Consider emotions, ambitions, or obligations.)
+6. Key Vulnerability: {character_vulnerability} (This could be a secret, a fear, or a personal flaw that they guard closely.)
+7. Emotional Trigger: {character_trigger} (Identify what can push this character beyond their normal behavior.)
+8. Relationship Dynamics:
+   - With Victim: {relationship_with_victim}
+   - With Other Key Characters: {relationships_with_others} (Detail past and present interactions that are relevant to the narrative.)
+
+### Narrative Function:
+
+9. Role in the Crime:
+   - Opportunity: How and when could they have committed the crime?
+   - Motive: What substantial reason might they have for harming the victim?
+   - Alibi: What is their alibi during the crime? What are its strengths and weaknesses?
+
+10. Behavioral Quirks:
+    - Secret Habit: {secret_habit} (Something they do privately that might be a clue to their deeper character.)
+    - Public Mannerism: {public_mannerism} (A noticeable habit that defines how they are perceived by others.)
+
+### Conflict and Resolution:
+
+11. Interpersonal Conflict:
+    - Primary Conflict: {primary_conflict} (With whom and what is the nature of this conflict?)
+    - Historical Grievances: {historical_grievances} (Past events that have led to resentment or secret alliances.)
+
+12. Climactic Potential:
+    - When Pressured: How does this character react under extreme stress or when cornered?
+    - Potential for Redemption or Downfall: What could lead them to either resolve their issues or spiral further into crisis?

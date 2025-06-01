@@ -1,0 +1,2 @@
+{"prompt”: “# Included File content is here\n\n”# Schema Title\nBrief description of the content to generate.\n\n## Use this schema:\n~~~
+Content: {content_to_generate}\n~~~\n\n---\n\n# Example:\n\n~~~\nContent: This is the generate content.\n~~~, "content": "Content: This is the actual generated content.”}

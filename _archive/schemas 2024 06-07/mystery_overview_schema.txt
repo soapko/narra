@@ -1,0 +1,35 @@
+# Metadata
+Max tokens: 2048
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {mystery_options_content}
+
+# Generate the Murder Mystery Overview
+Using the details of "Option 3", write a new detailed description of our murder mystery and about the cast of characters who are more than they seem.
+
+## Use this schema:
+~~~
+## Setup - The Murder Overview:
+
+
+Description: {mystery_overview}
+
+The cast: {cast_of_characters}
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Murder Overview:
+
+Description: Amid the lively zest of the Cinque Terre lemon festival, the normally tranquil coastal village transforms into a hive of joy and celebration. However, the festivities take a dark turn when a prominent local is found dead at the foot of the cliffs, her latest painting unfinished nearby. A seemingly accidental fall, but the scattered lemon peels around the body suggest foul play. The detective questions the festival organizer, with whom the artist recently had a public falling out. The chef, who was rumored to be romantically entwined with the artist, attracts scrutiny, especially as he stands to gain a collection of her works. The expatriate, envious of the artist's easy integration into village life, and the fisherman, who vehemently opposed the commercialization of the artist's work, are also suspect in this cliffside calamity.
+
+The cast: The cast includes the festival's charismatic organizer, a famous Italian chef known for his lemon-infused dishes, a secretive artist who captures the beauty of the cliffs in her paintings, a wealthy expatriate who recently purchased a cliffside villa, and a local fisherman whose family has lived in the village for generations. All five are connected by the festival and by a web of personal and professional relationships that have soured over time.
+
+~~~

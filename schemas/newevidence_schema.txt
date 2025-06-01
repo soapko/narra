@@ -1,0 +1,50 @@
+# Metadata
+Max Tokens: 1024
+Temperature: 0.9
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {reports_content}
+@include {locations_content}
+@include {evidence_content}
+@include {thecrime_content}
+
+# Act II - The Plot Thickens
+
+Present new insights on some of the existing evidence:
+- contradict some of the evidence
+- implicate the killer
+- does not interpret or provide leading conjecture
+
+## Use this schema:
+~~~
+## Act II - The Plot Thickens
+
+Location: {location_label}, {location_ID}
+E0#: {evidence_name}
+E0#.2: {new_insight}
+~~~
+
+---
+
+### Example:
+
+Good Example:
+~~~
+## Act II - The Plot Thickens
+
+Location: The Bar, L03
+E02: The shattered beer glass
+E02.2: This glass belongs to the bar which Peter owns down the stree
+~~~
+
+Bad Example:
+~~~
+## Act II - The Plot Thickens
+
+Location: The Bar, L03
+E02: The shattered beer glass
+E02.2: This glass belongs to the bar which Peter owns down the street, further implicating him in the murder.
+~~~

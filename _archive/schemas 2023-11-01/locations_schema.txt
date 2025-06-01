@@ -1,0 +1,29 @@
+# Metadata
+Max Tokens: 768
+Temperature: 0.6
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {reports_content}
+
+# Generate Locations of Interest
+Generate a list of 5 locations to investigate and question suspects without giving away secrets:
+
+## Use this schema:
+~~~
+## Setup - Locations of Interest:
+
+{location_label}: {location_name} : {description}
+~~~
+
+---
+
+### Example:
+~~~
+## Setup - Locations of Interest
+
+CAFETERIA: BIODOME CAFETERIA : Where residents often congregate for meals and relaxation time
+SMITH'S OFFICE : DR.CASEY SMITH'S OFFICE : A room filled with advanced research tools and adorned by framed polo jerseys, it reflects a taste for luxury.
+~~~

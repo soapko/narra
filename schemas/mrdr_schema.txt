@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Murder Mystery Game Schema",
+  "description": "A schema for defining elements in a murder mystery game.",
+  "type": "object",
+  "properties": {
+    "uniqueID": {
+      "type": "string",
+      "description": "A unique identifier for the mystery following the 'M###' scheme."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the particular murder mystery."
+    },
+    "datestamp": {
+      "type": "string",
+      "format": "date",
+      "description": "The date when the mystery will be published."
+    },
+    "teaser": {
+      "type": "string",
+      "description": "A short one-line teaser of the mystery."
+    },
+    "introduction": {
+      "type": "string",
+      "description": "The written introduction for the mystery."
+    },
+    "elements": {
+      "type": "array",
+      "description": "Array of all game elements including locations, clues, questions, testimonies, and people.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uniqueID": {
+            "type": "string",
+            "description": "A unique identifier for the element following an alphanumeric scheme, allowing for sub-elements (e.g., 'S02.C01' for clues related to suspect S02)."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["location", "clue", "question", "testimony", "person"],
+            "description": "The type of the element."
+          },
+          "displayText": {
+            "type": "string",
+            "description": "The text to be displayed to the player (e.g., name of a location, visible text of a question)."
+          },
+          "shortText": {
+            "type": "string",
+            "description": "A brief identifier without underscores for use in menus, selections, or accusations."
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed narrative description for the element, providing context and additional information to the player."
+          },
+          "tag": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Variable tags that can describe the current status or traits of the element (e.g., 'missing', 'deceased', 'suspicious')."
+          },
+          "unlocked": {
+            "type": "boolean",
+            "description": "Boolean indicating whether the element is unlocked."
+          },
+          "pointValue": {
+            "type": "integer",
+            "description": "Optional points associated with the element indicating its relevance towards an accurate accusation. Positive values (2, 4, 6) support correct accusations; negative values (-1, -3, -5) indicate contradictions or irrelevancies."
+          },
+          "actScope": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["ActI", "ActII", "ActIII"]
+            },
+            "description": "Defines which Acts the element is available in. It could appear in one or more Acts, controlling when players can interact with it."
+          },
+          "disclosures": {
+            "type": "object",
+            "description": "Manages prerequisites and subsequent unlocks.",
+            "properties": {
+              "requires": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of uniqueID(s) of elements needed to uncover this one."
+              },
+              "unlocks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of uniqueID(s) of elements unlocked by this one."
+              }
+            },
+            "required": ["requires", "unlocks"]
+          },
+          "content": {
+            "type": "object",
+            "description": "Specific content relevant to the element type.",
+            "properties": {
+              "clues": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of clue uniqueIDs contained in a location. Only applicable for elements of type 'location'."
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of question uniqueIDs a person can answer. Only applicable for elements of type 'person'."
+              }
+            }
+          }
+        },
+        "required": ["uniqueID", "type", "displayText", "shortText", "unlocked", "disclosures", "actScope"]
+      }
+    }
+  },
+  "required": ["uniqueID", "title", "datestamp", "teaser", "introduction", "elements"]
+}

@@ -1,0 +1,65 @@
+# Metadata
+Temperature: 0.25
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {locations_content}
+@include {reports_content}
+@include {evidence_content}
+@include {newevidence_content}
+@include {interrogate_content}
+@include {twist1_schema}
+
+
+# Revised Evidence Compilation
+
+Compile existing crime scene evidence and testimony into a single document.
+
+Notes:
+- Use capitalization instead of "**"
+- Use sentence-case capitalization for all descriptions.
+- Omit any suggestions, deductions, or editorialization from the evidence descriptions. Leave all deductions to the reader:
+    + good: "The missing time coincides with the estimated time of the victim's death."
+    + bad: "The missing time coincides with the estimated time of the victim's death, raising suspicions about their whereabouts. "
+- Some testimony questions depend on having previously discovered certain evidence. Append any evidence dependencies to the testimony.
+    + good: "Q1.1: (location_label, Evidence-3.1), Why did you write this letter to the victim?"
+    + bad: "Q1.1: Why did you write this letter to the victim?"
+
+## Use this schema:
+~~~
+## The Overview
+
+The victim is: {victim_name}
+The victim's role/occupation is: {victim_role}
+The victim's influence comes from their: {victim_influence}
+The victim's vulnerability is their: {victim_secret}
+The victim's actions that will lead to conflict: {victim_conflict}
+Crime scene report: {crime_scene}
+Initial autopsy report: {autopsy_report}
+Follow-up report: {final_report}
+
+---
+
+## All Discovererd Evidence
+
+Location: {location_label}
+Evidence-#: {evidence_name}
+Description-#: {description}
+Evidence-#.1: {new_insight_1}
+Evidence-#.2: {new_insight_2}
+
+---
+
+## All Testimony
+
+Suspect: {suspect_name}
+Q(1-6).1: (evidence-#),{detective_question}
+A(1-6).1: {suspect_answers}
+Q(1-6).2: (evidence-#),{detective_follow-up}
+A(1-6).2: {suspect_answers}
+Q(1-6).3: (evidence-#),{detective_follow-up}
+A(1-6).3: {suspect_answers}
+
+~~~

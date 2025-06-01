@@ -1,0 +1,25 @@
+# Metadata
+Max Tokens: 256
+Temperature: 0.6
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {locations_content}
+@include {evidence_content}
+@include {reports_content}
+@include {newevidence_content}
+
+# Overview
+Write an overview of the murder mystery.
+
+
+## Use this schema:
+~~~
+## Overview
+
+{name and description}
+~~~
+
+~~~

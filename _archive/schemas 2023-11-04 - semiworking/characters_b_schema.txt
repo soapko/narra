@@ -1,0 +1,54 @@
+# Metadata
+Max tokens: 2048
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_a_content}
+@include {murder_types}
+
+# Add Character Motivations
+Add details to the existing cast of characters.
+
+
+## Use this schema:
+~~~
+## Setup - The Cast of Characters (motivations):
+
+### Character # name: {cast_name}
+
+{cast_backstory} // Include upbringing, pivotal career moment and/or failure, biggest opportunity taken/missed, and how they got here
+
+{conflict_backstory} // How they had a chance for {cast_unattainable_desire} but were foiled
+
+Their greatest vulnerability is their: {cast_secret}
+Their influence comes from their: {cast_influence}
+Their tragic flaw is: {cast_flaw}
+
+{cast_name} would give anything for {cast_unattainable_desire}, but {frustrating_external_circumstance} always gets in the way, despite {cast_perceived_entitlement}.
+
+—
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Cast of Characters (motivations):
+
+### Character 1 name: SKYLER TAYLOR
+
+Skyler Taylor began their life in a small town, the offspring of two engineers. They proved to be a prodigious child, pushing boundaries and skipping grades. Skyler eventually ended up leaving their quaint little world behind for the prestigious corridors of MIT, studying astrophysics. After a failed stint in the corporate world that left them disillusioned and bitter, Skyler found solace in taking a research position at Dr. Hawthorne's astronomical observatory.
+
+Their greatest vulnerability is their: RESENTMENT OF THEIR UNFULFILLED AMBITIONS
+Their influence comes from their: BRILLIANT MIND AND ABILITY TO MANIPULATE COMPUTER SYSTEMS
+Their tragic flaw is: ABRASIVENESS AND INABILITY TO WORK WELL IN A TEAM.
+
+Skyler Taylor would give anything for A RECOGNIZED DISCOVERY THAT WOULD ECLIPSE DR. HAWTHORNE'S WORK, but THE LACK OF OPPORTUNITIES IN THEIR VICINITY always gets in the way, despite THEIR BELIEF THAT THEY ARE MORE DESERVING THAN OTHERS.
+
+—
+
+~~~

@@ -1,0 +1,25 @@
+# Metadata
+Temperature: 0.5
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {locations_content}
+@include {all_evidence_content}
+@include {solve2_content}
+@include {thecrime_content}
+
+# Assess the mystery
+Discuss the gap between the actual solution to the crime, your attempt to solve it, and the evidence that exists. Give recommendations for updating the mystery.
+
+
+## Use this schema:
+~~~
+## Assess the mystery
+
+{content}
+{recommendations}
+~~~
+
+~~~

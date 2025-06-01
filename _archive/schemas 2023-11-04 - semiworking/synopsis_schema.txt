@@ -1,0 +1,19 @@
+# Metadata
+Max tokens: 256
+Temperature: 0.5
+
+# Reference Content
+
+@include {setting_content}
+@include {reports_content}
+@include {thecrime_content}
+
+# The Synopsis
+Write a paragraph that summarizes the murder mystery. Include the setting, motive, and method or murder.
+
+## Use this schema:
+~~~
+# {Murder Mystery Title}
+{synopsis}
+~~~
+

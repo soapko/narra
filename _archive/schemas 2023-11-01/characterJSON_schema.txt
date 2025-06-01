@@ -1,0 +1,61 @@
+# Metadata
+Max tokens: 2048
+Model: gpt-3.5-turbo-16k
+Temperature: 0.0
+
+# Reference Content
+
+@include {characters_content}
+@include {characterintros_content}
+@include {bodyisfound_content}
+
+# Reference schemas
+
+@include {characters_schema}
+@include {characterintros_schema}
+@include {bodyisfound_schema}
+
+# JSON test
+
+Output all character information into JSON. Only write the JSON.
+
+## Use this schema:
+~~~
+{
+  "characters": [
+    {
+      "character_name": {string},
+      "character_role": {string},
+      "character_age": {integer},
+      "character_influence": {string},
+      "character_secret": {string},
+      "character_trauma": {string},
+      "character_desire": {string},
+      "opportunity_arises_for_desire": {string},
+      "foil_name": {string},
+      "foil_counteraction": {string},
+      "character_worst_fear": {string},
+      "character's_past_opportunity_for_desire": {string},
+      "how_foil_foiled_opportunity": {string},
+      "character_catastrophe": {string},
+      "secret_habit": {string},
+      "noticeable_habit": {string},
+      "introduction": {string},
+      "reaction": {string}
+    },
+~~~
+
+---
+
+### Example:
+
+~~~
+{
+  "characters": [
+    {
+      "character_name": "André LeBlanc",
+      "character_role": "World renowned director",
+      "character_age": 57,
+      "character_influence": "Prestigious status and experience in the film industry",
+…
+~~~

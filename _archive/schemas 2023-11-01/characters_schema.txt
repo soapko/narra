@@ -1,0 +1,67 @@
+# Metadata
+Max Tokens: 2048
+Temperature: 0.85
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+
+# Generate Characters
+
+Murder is the result of a person being driven beyond the extremes of what a person can tolerate. They don't see any other way out or to get what they desperately need. It requires past events so traumatic, or a future so bleak that they believe murder is the only option left to them.
+- Use gender-neutral pronouns
+- Do not generate detective or police characters
+- Generate four characters
+
+## Use this schema:
+~~~
+## Setup - The Four Characters:
+
+Character name: {character_name}
+Their role/occupation is: {character_role}
+Their age: {character_age}
+Their influence comes from their: {character_influence}
+Their greatest vulnerability is their: {character_secret}
+Their driving emotion is: {character_emotion}
+Their characteristic manner of speaking: {character_speech}
+They have conflicts with this character: {foil_name}
+Their relationship with {foil_name} is: {IDF_relationship}
+
+{character_name} has a traumatic past of {character_trauma} that manifests today as {character_glitch}. As a result they desperately need {character_desire}, but {frustrating_circumstance} always gets in the way.. 
+
+{foil_name} had similarly conflicted with them the past when {character's_past_opportunity_for_desire} and {how_foil_foiled_opportunity} which resulted in {character_catastrophe}. 
+
+This manifests in their secret habit of {secret_habit} and their outward habit of {noticeable_habit}.
+
+And when at last {opportunity_arises_for_desire}, they fear {foil_name} will {foil_counteraction}, which could catastrophically {character_worst_fear} unless they can remove them from the equation.
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Four Characters:
+
+Character name: TAYLOR HAWKINS
+Their role/occupation is: ROBOTICS ENGINEER
+Their influence comes from their: EXPERTISE IN THE DESIGN AND MAINTENANCE OF SPACE-RELATED MACHINERY AND ROBOTICS 
+Their greatest vulnerability is their: PARANOIA ABOUT ALIEN LIFE
+Their driving emotion is: FEAR
+Their characteristic manner of speaking: EFFUSIVE
+They have conflicts with this character: DR. MASON
+Their relationship with DR. MASON is: 🔎🧨👑💡😀
+
+TAYLOR HAWKINS has a traumatic past of WORKING ON A MISSION WHERE A FELLOW ASTRONAUT DIED DUE TO TECHNICAL FAILURE that manifests today as A SEVERE TRUST ISSUE. As a result, they desperately need TO PROVE THAT DR. MASON'S RESEARCH IS DANGEROUS AND SHOULD BE STOPPED, but DR. MASON'S REPUTATION AND CONTROL OVER THE MISSION always gets in the way.
+
+DR. MASON had similarly conflicted with them in the past when THEY ATTEMPTED TO EXPOSE FLAWS IN DR. MASON'S EXPERIMENTS and DR. MASON SUCCESSFULLY DEFLECTED ALL ACCUSATIONS, which resulted in THEIR DEMOTION.
+
+This manifests in their secret habit of TAMPERING WITH EQUIPMENT TO MAKE IT LOOK LIKE ALIEN INTERFERENCE and their outward habit of TALKING TO THEMSELVES WHEN THEY THINK NO ONE IS WATCHING.
+
+And when at last THE OPPORTUNITY TO DISCREDIT DR. MASON arises, they fear DR. MASON will DISCREDIT THEM AND GET THEM FIRED instead, which could catastrophically END THEIR CAREER IN SPACE EXPLORATION unless they can remove them from the equation.
+
+Character name: ANGIE BROCKMAN
+…
+~~~

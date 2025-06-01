@@ -1,0 +1,62 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+@include {characters_content}
+
+# Generate the crime
+
+There needs to be a red-herring and twist in the details surrounding the murder similar to these:
+- The victim appears to have been crushed by falling rocks, but they had poison in their system, not trauma from being crushed.
+- The victim was found dead in a suspect's lab with poisonous plants, but evidence suggests the body had been strangled and moved.
+- The victim was found dead in the desert in apparent skydiving accident, but they appear to have been mortally irradiated beforehand.
+
+The crime will almost never be a poisoning.
+
+The crime scene report:
+- Is an initial impression that will focus only on what is readily seen, heard, or smelled. 
+- It will not contain details that require additional lab work or analysis such as fingerprints, forensics, DNA. 
+- It will contain a surprising and important detail
+
+An initial autopsy report:
+- Is the first analysis by a coroner or field expert and can discern trauma or irregularities in the interior and exterior of the victim's body.
+- It will not contain details that require additional lab work such as blood work, forensics, DNA
+- It can introduce a new surprising cause-of-death, however, that contradicts the initial crime scene impression
+
+The follow-up report:
+- Is the final illuminating report from toxicology, ballistics, forensics, DNA
+- It will reveal or confirm a key incriminating detail
+
+## Use this schema:
+~~~
+## Setup - The Crime
+
+The victim is: {victim_name}
+The victim's role/occupation is: {victim_role}
+The victim's influence comes from their: {victim_influence}
+The victim's vulnerability is their: {victim_secret}
+The victim's actions that will lead to conflict: {victim_conflict}
+Crime scene report: {crime_scene}
+Initial autopsy report: {autopsy_report}
+Follow-up report: {final_report}
+~~~
+
+---
+
+### Example:
+~~~
+## Setup - The Crime
+
+The victim is: LORENZO BIANCHI
+The victim's role/occupation is: MASK MAKER
+The victim's influence derives from their: CONNECTIONS TO THE NOBLES AND THE ART WORLD
+The victim's vulnerability is their: CRIPPLING DEBT
+The victim's action that will lead to conflict: CREATING A MASTERPIECE TO SAVE THEIR FINANCIAL SITUATION
+Crime scene report: VICTIM FOUND DEAD UNDER A COLLAPSED STATUE. TRACES OF RED AROUND NECK AND FINGERTIPS.
+Initial autopsy report: LACK OF PHYSICAL TRAUMA AND DISCOLORATION OF LIVER SUGGEST CAUSE OF DEATH WAS NOT FROM THE COLLAPSED STATUE, BUT FROM POISON
+Follow-up report: CRITICALLY HIGH LEVEL OF SODIUM AZIDE PRESENT IN BLOOD AND STOMACH.
+~~~

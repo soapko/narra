@@ -1,0 +1,51 @@
+# Metadata
+Max Tokens: 4096
+Temperature: 0.7
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+@include {characters_content}
+@include {reports_content}
+@include {locations_content}
+@include {evidence_content}
+@include {thecrime_content}
+@include {newevidence_content}
+
+## Act II - Questioning Suspects
+
+For each suspect, generate three Q&As:
+- The first question explores past event where victim foiled an opportunity for the suspect. The follow-ups uncover their current opportunities.
+- The second question explores their vulnerability, desires, and fears. The follow-ups uncover their catastrophic fears.
+- The third question explores their ability to commit the crime and attempt to get away with it,
+- Probe evidence that puts the suspect at the scene of the crime. 
+- Be forceful with the suspects.
+- Each question will have one follow-up Q&A and an update with new investigative evidence that either confirms or conflicts with the testimony.
+
+## Use this schema:
+~~~
+## Act II - Questioning Suspects
+
+Suspect: {suspect_name}
+Q(1-3).1: {detective_question}
+A(1-3).1: {suspect_answers}
+Q(1-3).2: {detective_follow-up}
+A(1-3).2: {suspect_answers}
+Update(1-3): {update_on_testimony_evidence}
+~~~
+
+---
+
+### Example:
+~~~
+## Act II - Questioning Suspects
+
+Suspect: Caroline White
+Q1.1: Can you explain why you were encouraging the lead actress to switch agencies despite knowing that she was signed with Giallo's agency?
+A1.1: I was offering her a better deal, it’s business, not personal. 
+Q1.2: Does this have anything to do with your desire to regain your position as a top talent agent?
+A1.2: Of course it does. In this business, you have to be ruthless. But that doesn't mean I would kill for it.
+Update1: Examination of Caroline’s computer reveals that the email was deleted but not sent to the actress.
+…
+~~~

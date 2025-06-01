@@ -1,0 +1,26 @@
+# Metadata
+Temperature: 0.5
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {locations_content}
+@include {reports_content}
+@include {evidence_content}
+@include {newevidence_content}
+@include {interrogate_content}
+
+# Attempt to solve the mystery
+You will attempt to solve the crime step-by-step by using only the information presented to you and your wits and intellect.
+
+
+## Use this schema:
+~~~
+## Initial deductions of the crime
+
+{deductions}
+{primary suspect}
+~~~
+
+~~~

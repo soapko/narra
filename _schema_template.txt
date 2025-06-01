@@ -1,0 +1,27 @@
+# Metadata
+Max tokens: 1024
+Temperature: 0.8
+
+# Reference Content
+
+@include {file w/o suffix}
+
+## {Schema Title}
+Brief description of the content to generate.
+
+## Use this schema:
+~~~
+## {Section Name}
+
+Content: {content_to_generate}
+~~~
+
+---
+
+### Example:
+
+~~~
+## {Section Name}
+
+Content: This is the generated content.
+~~~

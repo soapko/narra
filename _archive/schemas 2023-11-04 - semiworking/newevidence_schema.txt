@@ -1,0 +1,50 @@
+# Metadata
+Max tokens: 1024
+Temperature: 0.9
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {reports_content}
+@include {locations_content}
+@include {evidence_content}
+@include {thecrime_content}
+
+# Act III - New revelations
+
+Present new insights on some of the existing evidence:
+- contradict some of the evidence
+- implicate the killer
+- does not interpret or provide leading conjecture
+
+## Use this schema:
+~~~
+## Act III - New evidence revelations
+
+Location: {location_label}
+Evidence-#: {evidence_name}
+Follow-up-#.2: {new_insight}
+~~~
+
+---
+
+### Example:
+
+Good Example:
+~~~
+## Act III - New evidence revelations
+
+Location: THE BAR
+Evidence-2: THE SHATTERED BEER GLASS
+Follow-up-2.2: THIS GLASS BELONGS TO THE BAR WHICH PETER OWNS DOWN THE STREET.
+~~~
+
+Bad Example:
+~~~
+## Act III - New evidence revelations
+
+Location: THE BAR
+Evidence-#: THE SHATTERED BEER GLASS
+Follow-up-#.2: THIS GLASS BELONGS TO THE BAR WHICH PETER OWNS DOWN THE STREET, FURTHER IMPLICATING HIM IN THE MURDER.
+~~~

@@ -1,0 +1,17 @@
+## The Interpersonal Dynamics Framework (IDF)
+The IDF involves 5 categories, each presenting two contrasting characteristics of relational dynamics:
+
+- Connection: Close 🔎 or Distant 🔭
+- Stability: Stable ⚖️ or Volatile 🧨
+- Control: Dominant 👑 or Passive 🙇
+- Communication: Emotional 💖 or Rational 💡
+- Security: Secure 😀 or Insecure 😰
+
+Relationships are indicated as an emoji string using this format: {Connection}{Stability}{Power}{Communication}{Security}
+
+---
+
+### Example:
+~~~
+A {close}{volatile}{dominant}{rational}{insecure} relationship is: 🔎🧨👑 💡😰
+~~~

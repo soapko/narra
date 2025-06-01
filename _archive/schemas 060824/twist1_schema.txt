@@ -1,0 +1,96 @@
+# Metadata
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {locations_content}
+@include {reports_content}
+@include {evidence_content}
+@include {newevidence_content}
+@include {interrogate_content}
+@include {solve1_content}
+@include {thecrime_schema}
+
+
+# Narrative Twist
+
+The story thusfar is too predictable. 
+
+Instructions:
+First, overwrite the "Crime Reveal" with a different killer, and motive, etc and we will introduce new evidence to make it work.
+Second, use up to three of the following narrative devices to introduce new evidence and testimony that provides a twist to the narrative and will challenge the player's deductions. DO NOT INTRODUCE NEW CHARACTERS.
+
+## Narrative devices
+
+1. Misdirection and Red Herrings
+
+Introduce clues and suspects that seem plausible but ultimately lead nowhere. This keeps readers guessing and second-guessing their assumptions. Ensure these red herrings are convincing and integrated naturally into the narrative.
+
+2. Unreliable Narrators or Witnesses
+
+Use characters who provide misleading or incomplete information. This can be due to their own agendas, misunderstandings, or deliberate deception. An unreliable narrator or witness can add layers of complexity to the story.
+
+3. Hidden Motives and Backstories
+
+Reveal unexpected motives and backstories for your characters. A seemingly innocent character might have a compelling reason for committing the crime that is only revealed later in the story. These hidden motives should be foreshadowed subtly throughout the narrative.
+
+4. Non-linear Timelines
+
+Present events out of chronological order. This technique can keep readers off balance and make the eventual revelation of the timeline both surprising and satisfying. Ensure that the non-linear structure is clear enough for readers to follow.
+
+5. Sympathetic Villains
+
+Create a murderer with a sympathetic or understandable reason for their actions. This adds moral ambiguity and can make the resolution more emotionally complex for the readers. Show the villain’s perspective and struggles to build empathy.
+
+6. Secondary Crimes and Subplots
+
+Introduce other crimes or subplots that seem unrelated but are eventually connected to the main mystery. These can provide additional red herrings and deepen the plot. Ensure that these subplots are engaging and relevant.
+
+7. Conspiracies and Collaborations
+
+Reveal that the crime was part of a larger scheme involving multiple characters. This can add layers of intrigue and complexity. Develop the relationships and interactions between conspirators carefully to make the conspiracy believable.
+
+8. Character Deception
+
+Have the true culprit manipulate events and other characters to divert suspicion away from themselves. This can involve planting evidence, creating false alibis, or manipulating other suspects. Develop the culprit’s strategy in a way that aligns with their character traits and motives.
+
+9. Recontextualizing Evidence
+
+Reveal new information that changes the meaning of previously discovered evidence. This can make readers re-evaluate everything they thought they knew. Ensure these revelations are plausible and well-foreshadowed.
+
+10. Last-minute Twists
+
+Introduce a significant twist just before the resolution. This can be a surprising revelation about a character, a hidden piece of evidence, or a sudden turn of events. Make sure this twist is logical and ties together loose ends.
+
+
+## Use this schema:
+~~~
+## Act III : The Crime - The twist
+
+{real_perpetrator_name}, determined to not let {victim_name} {victim_conflict_of_interest_action}, anticipated an opportunity to {action_to_foil_victim} while {victim_name} was {victim_vulnerable_action}.
+
+{Accidentally/In a fit of passion/In an act of desperation/According to plan}, {real_perpetrator} {deadly_act} which resulted in {result_of_deadly_act}. They proceeded to {actions_to_cover_up} in order to make it appear that {misdirection}.
+
+## Act IV - Narrative twists
+
+{twists explained}
+
+## Act IV - New evidence emerges
+
+Location: {location_label}
+Evidence-#: {evidence_name}
+Follow-up-#.2: {new_insight}
+
+---
+
+## Act IV - Questioning Suspects
+
+Suspect: {suspect_name}
+Q(4-6).1: {detective_question}
+A(4-6).1: {suspect_answers}
+Q(4-6).2: {detective_follow-up}
+A(4-6).2: {suspect_answers}
+
+~~~

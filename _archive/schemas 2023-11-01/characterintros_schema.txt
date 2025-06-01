@@ -1,0 +1,34 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.6
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+@include {characters_content}
+@include {locations_content}
+
+## Act I - Meet the characters
+For each existing character, write a paragraph that introduces each character without divulging any of their secrets.
+Stop after the last character.
+
+## Use this schema:
+~~~
+## Act I - Meet the characters
+
+Character: {character_name}
+{introduction}
+
+~~~
+
+---
+
+### Example:
+~~~
+## Act I - Meet the characters
+
+Character:  Dr. Alexei Sokolov
+In the depths of the Pacific Ocean, within the luxurious confines of a state-of-the-art underwater biodome, resides Dr. Alexei Sokolov, the well-respected lead marine biologist known for his pioneering research on deep-sea species. With a sharp wit and a never-ending thirst for knowledge, Dr. Sokolov has dedicated his life to uncovering the mysteries of the ocean.
+…
+~~~

@@ -1,0 +1,52 @@
+# Metadata
+Max tokens: 2048
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+
+# Generate the Murder Mystery Overview
+Generate the overview of the mystery in the style of an Agatha Christie or "Knives Out" mystery.
+The player is the detective. The entire cast of five characters will be alive at the outset, and then one will be murdered during the story.
+
+## Use this schema:
+~~~
+## Setup - The Murder Mystery Options:
+
+
+Description: {Back_cover} // The back-of-the-cover description
+
+What brings this cast of characters together?: {cast_ties} // Do they all know each other? Do they have intersecting interests, secrets, desires?
+
+Discuss three possible murder mysteries based on the available information:
+
+### Option 1:
+{murder_mystery_option_1}
+
+### Option 2:
+{murder_mystery_option_1}
+
+
+### Option 3:
+{murder_mystery_option_1}
+
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Murder Mystery Options:
+
+Description: In the shadow of rolling vineyards, amidst the quiet affluence of Napa Valley, the historic Blackwood Manor has been transformed into an opulent boutique hotel, boasting heirloom antiques and lush gardens. Esteemed guests arrive for a weekend of wine-tasting and relaxation, unaware that they will soon be entangled in a sinister plot of greed, surprise twists, and murder.
+
+What brings this cast of characters together?: The eclectic group consists of a renowned but reclusive vineyard owner, an ambitious hotel critic, a wealthy couple celebrating their anniversary, and a mysterious stranger with an invitation nobody can account for. Their lives intertwine through a web of business rivalries, romantic entanglements, and a shared history with the Blackwood Manor itself.
+
+Discuss three possible murder mysteries based on the available information:
+
+### Option 1:
+The renowned vineyard owner is found dead in the wine cellar, an antique corkscrew handle protruding ominously from his chest. The detective must discern whether this was a crime of passion, spurred by jealousy and secret affairs, or a calculated move to control the coveted vineyards. Suspicions point towards the hotel critic, who seems to know more about the victim's business than they let on, and the wealthy couple whose marriage may not be as perfect as it appears.
+~~~

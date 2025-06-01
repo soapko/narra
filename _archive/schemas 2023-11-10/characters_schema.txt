@@ -1,0 +1,76 @@
+# Metadata
+Max tokens: 2048
+Temperature: 0.75
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+
+# Generate Characters
+
+Murder is the result of a person being driven beyond the extremes of what a person can tolerate. They don't see any other way out or to get what they desperately need. It requires past events so traumatic, or a future so bleak that they believe murder is the only option left to them.
+- Use gender-neutral pronouns
+- Do not generate detective or police characters
+- Generate five characters
+
+## Use this schema:
+~~~
+## Setup - The Five Characters:
+
+Character # name: {character_name}
+Their role/occupation is: {character_role}
+Their age: {character_age}
+They were born to this class: {character_born_class}
+If different, they are currently in this class: {character_class}
+People think they are this type of person: {character_perceived}
+If different, they are actually this type of person: {character_actual}
+Their influence comes from their: {character_influence}
+Their greatest vulnerability is their: {character_secret}
+Their driving emotion is: {character_emotion}
+Their characteristic manner of speaking: {character_speech}
+They have conflicts with this character: {foil_name}
+Their relationship with {foil_name} is: {IDF_foil_relationship}
+
+{character_name} has a traumatic past of {character_trauma} that manifests today as {character_glitch}. As a result they desperately need {character_desire}, but {frustrating_circumstance} always gets in the way.
+
+{character_name} and {foil_name} have clashed before. Once, when they {past_opportunity}, {foil_name} {foil_gets_in_the_way}, which resulted in {character_name} {character_catastrophe}.
+
+This manifests in their secret habit of {secret_habit} and their outward habit of {noticeable_habit}.
+
+And when at last {opportunity_arises_for_desire}, they fear {foil_name} will {foil_counteraction}, which could catastrophically {character_worst_fear} unless they can remove them from the equation.
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Five Characters:
+
+Character 1 name: TAYLOR HAWKINS
+Their role/occupation is: ROBOTICS ENGINEER
+Their age: 45
+They were born to this class: LOWER CLASS
+If different, they are currently in this class: LOWER MIDDLE CLASS
+People think they are this type of person: OUTGOING SOCIALITE
+If different, they are actually this type of person: RECLUSIVE INTROVERT
+Their influence comes from their: EXPERTISE IN THE DESIGN AND MAINTENANCE OF SPACE-RELATED MACHINERY AND ROBOTICS 
+Their greatest vulnerability is their: NEED TO TAKE ANTI-PSYCHOTIC MEDICATION
+Their driving emotion is: FEAR
+Their characteristic manner of speaking: EFFUSIVE
+They have conflicts with this character: DR. MASON
+Their relationship with DR. MASON is: 🔎🧨👑💡😀
+
+TAYLOR HAWKINS has a traumatic past of WORKING ON A MISSION WHERE A FELLOW ASTRONAUT DIED DUE TO TECHNICAL FAILURE that manifests today as SECURITY CATASTROPHIZING. As a result, they desperately need TO PROVE THAT DR. MASON'S RESEARCH IS DANGEROUS, but DR. MASON'S REPUTATION AND CONTROL OVER THE MISSION always gets in the way.
+
+TAYLOR and DR. MASON have clashed before. Once, when they WERE GIVEN AUTHORITY TO IMPLEMENT NEW SECURITY PROCEDURES, DR. MASON CALLED IN A FAVOR TO BE MADE EXEMPT FROM THE SECURITY MEASURES, which resulted in TAYLOR BEING UNABLE TO STOP ANOTHER ACCIDENT.
+
+This manifests in their secret habit of OBSESSIVELY WATCHING SECURITY FOOTAGE and their outward habit of REFLEXIVELY QUESTIONING THE SAFETY OF EVERYTHING DR. MASON SUGGESTS.
+
+And when at last THE OPPORTUNITY TO EXPOSE DR. MASON'S DANGEROUS BEHAVIOR arises, they fear DR. MASON will GET THEM FIRED instead, which could catastrophically END THEIR CAREER IN SPACE EXPLORATION unless they can remove them from the equation.
+
+Character 2 name: ANGIE BROCKMAN
+…
+~~~

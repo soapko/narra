@@ -1,0 +1,61 @@
+# Metadata
+Max Tokens: 512
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+
+# Generate the crime
+
+There needs to be a red-herring and twist in the details surrounding the murder similar to these:
+- The victim appears to have been crushed by falling rocks, but they had poison in their system, not trauma from being crushed.
+- The victim was found dead in a suspect's lab with poisonous plants, but evidence suggests the body had been strangled and moved.
+- The victim was found dead in the desert in apparent skydiving accident, but they appear to have been mortally irradiated beforehand.
+
+The crime will almost never be a poisoning.
+
+The crime scene report:
+- Is an initial impression that will focus only on what is readily seen, heard, or smelled. 
+- It will not contain details that require additional lab work or analysis such as fingerprints, forensics, DNA. 
+- It will contain a surprising and important detail
+
+An initial autopsy report:
+- Is the first analysis by a coroner or field expert and can discern trauma or irregularities in the interior and exterior of the victim's body.
+- It will not contain details that require additional lab work such as blood work, forensics, DNA
+- It can introduce a new surprising cause-of-death, however, that contradicts the initial crime scene impression
+
+The follow-up report:
+- Is the final illuminating report from toxicology, ballistics, forensics, DNA
+- It will reveal or confirm a key incriminating detail
+
+## Use this schema:
+~~~
+## Setup - The Scene of the Crime
+
+The victim is: {victim_name}
+The victim's role/occupation is: {victim_role}
+The victim's influence comes from their: {victim_influence}
+The victim's vulnerability is their: {victim_secret}
+The victim's actions that will lead to conflict: {victim_conflict}
+E00: Crime scene report: {crime_scene}
+E00.1: Initial autopsy report: {autopsy_report}
+E00.2: Follow-up report: {final_report}
+~~~
+
+---
+
+### Example:
+~~~
+## Setup - The Crime
+
+The victim is: Lorenzo Bianchi
+The victim’s role/occupation is: Mask maker
+The victim’s influence derives from their: Connections to the nobles and the art world
+The victim’s vulnerability is their: Crippling debt
+The victim’s action that will lead to conflict: Creating a masterpiece to save their financial situation
+E00: Crime scene report: Victim found dead under a collapsed statue. Traces of red around neck and fingertips.
+E00.1: Initial autopsy report: Lack of physical trauma and discoloration of liver suggest cause of death was not from the collapsed statue, but from poison
+E00.2: Follow-up report: Critically high level of sodium azide present in blood and stomach.
+~~~

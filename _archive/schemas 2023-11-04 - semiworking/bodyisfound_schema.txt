@@ -1,0 +1,43 @@
+# Metadata
+Max tokens: 1024
+Temperature: 0.6
+
+# Reference Content
+
+@include {setting_content}
+@include {IDF}
+@include {characters_content}
+@include {locations_content}
+
+## Act I - The body is found
+1. Write a succinct paragraph describing the events of discovering the victim without divulging any evidence.
+
+2. And then, for each suspect, generate a description that reveals more about them without divulging their secrets and does not overtly explain what certain signs mean.
+
+## Use this schema:
+~~~
+## Act I - The body is found
+
+{discovery}
+
+### The suspects react:
+
+Character: {character_name}
+{reaction}
+
+~~~
+
+---
+
+### Example:
+~~~
+## Act I - The body is found
+
+As the sun began to rise over the prestigious seaside town of Cannes, a chilling discovery was made. The lifeless body of elite film actress Valentina Rossi was found outside her luxury hotel suite. She lay sprawled on the cobblestone street, her elegant evening gown a stark contrast to the gruesome scene. Initially, it appeared as though she had fallen from her balcony, but upon closer inspection, it became clear that there was more to this tragic incident than meets the eye. The shocking news spread quickly, casting a grim shadow over the ongoing International Film Festival and leaving everyone in stunned silence.
+
+### The suspects react:
+
+Character: André LeBlanc
+The news of Valentina Rossi's death hit André LeBlanc like a ton of bricks. The director was seen pacing around his temporary office, a deep frown etched on his face. He seemed lost in thought, occasionally glancing at the empty chair across from his desk where Valentina had sat just a few days ago. His usual charismatic demeanor was replaced by an unsettling quiet, and it was clear that the director was deeply affected by the tragic news.
+…
+~~~

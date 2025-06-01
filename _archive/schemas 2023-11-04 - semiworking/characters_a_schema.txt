@@ -1,0 +1,39 @@
+# Metadata
+Max tokens: 1024
+Temperature: 0.8
+
+# Reference Content
+
+@include {setting_content}
+@include {murder_types}
+
+# Generate the Cast of Characters
+Generate the five main characters of the murder mystery.
+Do not generate a detective or police character
+
+## Use this schema:
+~~~
+## Setup - The Cast of Characters (FIVE characters):
+
+### Character # name: {cast_name}
+Their role/occupation is: {cast_role}
+Their driving emotion is: {cast_emotion}
+Their characteristic manner of speaking: {cast_speech}
+Their age: {cast_age}
+
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Cast of Characters (FIVE characters):
+
+### Character 1 name: TAYLOR HAWKINS
+Their role/occupation is: ROBOTICS ENGINEER
+Their driving emotion is: FEAR
+Their characteristic manner of speaking: EFFUSIVE
+Their age: 45
+
+~~~

@@ -1,0 +1,65 @@
+# Metadata
+Max Tokens: 2048
+Temperature: 0.9
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_content}
+@include {reports_content}
+@include {locations_content}
+
+# Act II - Evidence gathering
+
+For each "Location of Interest", generate evidence:
+- The scene of the crime will have three pieces of evidence and the other locations will have one or two.
+- One piece of red-herring evidence should appear to reference multiple suspects.
+- Show a suspect's desire, or reference an opportunity to attain it.
+- Tie one or more suspects to the scene or method of the crime.
+- Each evidence will have a follow-up that reveals an important insight which either incriminates or exonerates suspects.
+- Do not speculate on who the evidence incriminates or exonerates.
+- Do not speculate on what the evidence suggests.
+
+## Use this schema:
+~~~
+## Act II - Evidence gathering
+
+Location: {location_label}
+Evidence-1: {evidence_name}
+Description-1: {description}
+Follow-up-1.1: {new_insight}
+
+Evidence-2 {evidence_name}
+Description-2: {description}
+Follow-up-2.1: {new_insight}
+
+Evidence-3 {evidence_name}
+Description-3: {description}
+Follow-up-3.1: {new_insight}
+~~~
+
+---
+
+### Example:
+
+~~~
+## Act II - Evidence gathering
+
+Location: SHARK TANK
+Evidence-1: RARE DEEP-SEA SPECIES HOUSED IN THE SHARK TANK
+Description-1: THESE PARTICULAR SPECIES ARE KNOWN FOR THEIR LETHALITY AND RARITY.
+Follow-up-1.1: THESE SHARKS HAVE BEEN ILLEGALLY TRAFFICKED, DESPITE WHAT CLARA SAID.
+…
+~~~
+
+### Bad Example:
+This example incorrectly speculates on what the evidence suggests.
+~~~
+## Act II - Evidence gathering
+
+Location: SHARK TANK
+Evidence: RARE DEEP-SEA SPECIES HOUSED IN THE SHARK TANK
+Description: THESE PARTICULAR SPECIES ARE KNOWN FOR THEIR LETHALITY AND RARITY.
+Follow-up: THESE SHARKS HAVE BEEN ILLEGALLY TRAFFICKED, DESPITE WHAT CLARA SAID WHICH SUGGESTS SHE MAY BE HOLDING SOMETHING BACK.
+…
+~~~

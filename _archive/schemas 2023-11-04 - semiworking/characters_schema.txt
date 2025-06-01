@@ -1,0 +1,56 @@
+# Metadata
+Max tokens: 2048
+Model: gpt-3.5-turbo-16k
+Temperature: 0.0
+
+# Reference Content
+
+@include {setting_content}
+@include {characters_a_content}
+@include {characters_b_content}
+@include {characters_c_content}
+
+# Reference schemas
+
+@include {characters_a_schema}
+@include {characters_b_schema}
+@include {characters_c_schema}
+
+# Merge all Character information
+Merge the character details into a single list.
+
+
+## Use this schema:
+~~~
+## Setup - The Cast of Characters:
+
+### Character # name: {cast_name}
+
+{cast_backstory}
+{conflict_backstory}
+
+{cast_name} would give anything for {cast_unattainable_desire}, but {frustrating_external_circumstance} always gets in the way, despite {cast_perceived_entitlement}.
+
+And when at last {opportunity_arises_for_desire}, they fear {foil_name} will {foil_counteraction}, which could catastrophically {character_worst_fear} unless they can remove them from the equation.
+
+If it came to it, they would be a {murderer_type} // Based on The Archetypal Types of Murderers
+
+Their age: {cast_age}
+Their role/occupation is: {cast_role}
+Their driving emotion is: {cast_emotion}
+Their characteristic manner of speaking: {cast_speech}
+Their greatest vulnerability is their: {cast_secret}
+Their influence comes from their: {cast_influence}
+Their tragic flaw is: {cast_flaw}
+
+They have conflicts with: {foil_cast_name}
+A past opportunity: {past_opportunity}
+Foiled by: {foil_gets_in_the_way}
+Resulted in: {character_catastrophe}
+
+Secret habit: {secret_habit}
+Noticeable habit: {noticeable_habit}
+
+—
+
+~~~

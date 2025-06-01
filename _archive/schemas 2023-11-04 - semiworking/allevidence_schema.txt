@@ -1,0 +1,75 @@
+# Metadata
+Max tokens: 4096
+Temperature: 0.0
+Model: gpt-3.5-turbo
+
+# Reference Content
+
+@include {evidence_content}
+@include {newevidence_content}
+
+# Act III - Evidence by Act
+
+Merge the evidence of "evidence_content" and "newevidence_content" into a single list organized by Act.
+
+
+## Use this schema:
+~~~
+## Act III - Evidence by Act
+
+Location: {location_label}
+Evidence-#: {evidence_name}
+Act-1: {description}
+Act-2: {follow-up-#.1}
+Act-3: {follow-up-#.2}
+~~~
+
+---
+
+### Example:
+
+In the file 'evidence_content.json':
+~~~
+### Location: STAIRCASE
+Evidence-1: SMALL BLOOD SMEAR
+Description-1: Found on the uppermost rung of the staircase. Matches type with the victim's blood.
+Follow-up-1.1: Additionally, traces of skin tissue under the victim’s fingernails suggests the victim struggled with their assailant at this position.
+
+Evidence-2: CRACK ON TILE
+Description-2: A tile from the top rung of the staircase bears a significant crack, potentially from a sharp, forceful impact.
+Follow-up-2.1: The crack matches the size of the digging tools found in the Garden, hinting at how the cause of the fall might have been orchestrated.
+
+Evidence-3: LOOSE AREA RUG
+Description-3: Positioned precariously on the top rung of the staircase. It appears to have been recently disturbed.
+Follow-up-3.1: A few strands of hair found intertwined with the rug fibers match Celeste's hair, placing her on the scene.
+~~~
+
+In the file 'newevidence_content.json':
+~~~
+Location: STAIRCASE
+Evidence-1: SMALL BLOOD SMEAR
+Follow-up-1.2: A new DNA-test reveals not only the DNA of ALEXI KRAMER in the blood smear, but also a few strands of DNA that match with CELESTE GREY.
+
+Evidence-3: LOOSE AREA RUG
+Follow-up-3.2: Further examination of the rug revealed an additional crucial clue - the imprint of an unusually designed sole consistent with the shoes which only CELESTE GREY wears.
+~~~
+
+Resulting output of merging the evidence:
+~~~
+## Act III - Evidence by Act
+
+### Location: STAIRCASE
+Evidence-1: SMALL BLOOD SMEAR
+Act-1: Found on the uppermost rung of the staircase. Matches type with the victim's blood.
+Act-2: Additionally, traces of skin tissue under the victim’s fingernails suggests the victim struggled with their assailant at this position.
+Act-3: A new DNA-test reveals not only the DNA of ALEXI KRAMER in the blood smear, but also a few strands of DNA that match with CELESTE GREY.
+
+Evidence-2: CRACK ON TILE
+Act-1: A tile from the top rung of the staircase bears a significant crack, potentially from a sharp, forceful impact.
+Act-2: The crack matches the size of the digging tools found in the Garden, hinting at how the cause of the fall might have been orchestrated.
+
+Evidence-3: LOOSE AREA RUG
+Act-1: Positioned precariously on the top rung of the staircase. It appears to have been recently disturbed.
+Act-2: A few strands of hair found intertwined with the rug fibers match Celeste's hair, placing her on the scene.
+Act-3: Further examination of the rug revealed an additional crucial clue - the imprint of an unusually designed sole consistent with the shoes which only CELESTE GREY wears.
+~~~

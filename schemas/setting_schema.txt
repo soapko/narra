@@ -1,0 +1,30 @@
+# Metadata
+Max Tokens: 32
+Temperature: 0.9
+
+# The Setting:
+
+Generate an exciting setting (on earth) similar to these options:
+⁃ Remote, scientific research station in the Antarctic tundra
+⁃ Bustling, exotic spice market in Marrakech, Morocco
+⁃ Elegant, art deco style luxury train traversing across Europe
+⁃ Secluded, haunted inn located in the Scottish Highlands
+
+These settings have already been used, so avoid them:
+- Grand, centuries-old castle nestled in the misty forests of Transylvania
+
+
+## Use this schema:
+~~~
+## Setup - The Setting:
+The setting is: {setting}
+~~~
+
+---
+
+### Example:
+
+~~~
+## Setup - The Setting:
+The setting is: Lavish cruise ship sailing through the Bermuda Triangle
+~~~
