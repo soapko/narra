@@ -24,28 +24,42 @@ Narra transforms LLM narrative generation from a linear process into a structure
    ```bash
    python -m venv narra-env
    source narra-env/bin/activate  # On Windows: narra-env\Scripts\activate
-   pip install openai
+   pip install openai python-dotenv
    ```
 
 3. **Configure API key**
    ```bash
    cp .env.example .env
-   # Edit .env and add your OpenAI API key
+   # Edit .env and add your OpenAI API key:
+   # OPENAI_API_KEY=sk-your-actual-key-here
    ```
 
-### Basic Usage
+### Running Narra
 
+**Preferred method:**
+```bash
+python Narra.py
+```
+
+This runs the complete schema pipeline starting from the first schema in the execution order.
+
+**Starting from a specific schema:**
+To begin processing from a particular point in your pipeline, modify the last line in `Narra.py`:
+```python
+# Instead of:
+tool.run_from_schema('setting_schema')
+
+# Use any schema from your execution order:
+tool.run_from_schema('characters_schema')  # Starts from characters onward
+tool.run_from_schema('evidence_schema')    # Starts from evidence onward
+```
+
+**Alternative programmatic usage:**
 ```python
 from Narra import ContentGenerationTool
 
-# Initialize the framework
 tool = ContentGenerationTool('.')
-
-# Generate a complete murder mystery narrative
-tool.run_from_schema('setting_schema')
-
-# Or start from a specific schema
-tool.run_from_schema('characters_schema')
+tool.run_from_schema('setting_schema')  # Run complete pipeline
 ```
 
 ## 📖 How It Works
@@ -107,6 +121,71 @@ The included schemas demonstrate Narra's approach with a complete murder mystery
 - **Evidence**: Crime scene details and investigative elements  
 - **Plot Progression**: From discovery through resolution
 
+## 🛠️ Creating Your Own Schemas
+
+**Important**: You must create your own schemas before using Narra. The framework does not generate content without properly defined schema files.
+
+### Schema Structure
+
+Every schema file follows this structure:
+
+```
+# Metadata
+Max tokens: 1024        # Token limit for this generation
+Temperature: 0.8        # Creativity level (0.0-1.0)
+Model: gpt-4o          # OpenAI model to use
+
+# Your generation instructions
+Generate compelling character backgrounds that establish...
+
+@include {setting_content}    # Reference previous schema output
+
+## Use this schema:
+~~~
+## Character Profile:
+Name: {character_name}
+Role: {character_role}
+...
+~~~
+
+---
+
+### Example:
+~~~
+## Character Profile:
+Name: Dr. Sarah Chen
+Role: Marine biologist
+~~~
+```
+
+### Leverage-First Philosophy
+
+Narra's power comes from starting with **highly leveraged details** that scaffold future content generation:
+
+1. **Start with Foundation Elements**: Begin with schemas that establish the most influential aspects of your narrative
+   - **Setting**: Creates atmosphere and constraints for all future content
+   - **Core Characters**: Psychological profiles that drive plot decisions
+   - **Central Conflict**: The engine that powers narrative tension
+
+2. **Build Increasing Definition**: Use subsequent schemas to flesh out details
+   - **Character Relationships**: How foundation characters interact
+   - **Plot Complications**: Events that test established character motivations
+   - **Resolution Elements**: Outcomes that feel inevitable given the foundation
+
+3. **Cross-Reference Strategically**: Later schemas should `@include` earlier content to:
+   - Maintain consistency with established facts
+   - Build upon character motivations and relationships
+   - Create callbacks and foreshadowing
+
+### Example: Murder Mystery Leverage Strategy
+```
+1. setting_schema     → Establishes atmosphere and constraints
+2. characters_schema  → Creates psychological foundation for all actions  
+3. evidence_schema    → Builds clues that reflect character psychology
+4. crime_schema       → Event that leverages character motivations
+5. resolution_schema  → Outcome that feels inevitable given foundations
+```
+
 ## 🔧 Creating New Domains
 
 Narra can be extended to any narrative domain:
@@ -122,10 +201,30 @@ Narra can be extended to any narrative domain:
 
 ### Steps to Create New Domain
 
-1. **Design Schema Sequence**: Map logical progression of narrative elements
-2. **Create Schema Files**: Develop templates with appropriate metadata
-3. **Define Dependencies**: Set up cross-references using `@include` directives
-4. **Configure Pipeline**: Add to execution order in `ContentGenerationTool`
+1. **Design Schema Sequence**: Map logical progression from highest to lowest leverage
+2. **Create Schema Files**: Place `.txt` files in `schemas/` directory with proper metadata
+3. **Define Dependencies**: Set up `@include` directives to reference previous content
+4. **Configure Execution Order**: ⚠️ **Currently requires manual code editing**
+
+### ⚠️ Configuring Execution Order (Temporary Limitation)
+
+For now, you must manually edit the `execution_order` array in `Narra.py`:
+
+```python
+class ContentGenerationTool:
+    def __init__(self, base_drive_path):
+        # ... other code ...
+        
+        # Edit this array to match your schema sequence:
+        self.execution_order = [
+            "your_foundation_schema",
+            "your_character_schema", 
+            "your_conflict_schema",
+            "your_resolution_schema"
+        ]
+```
+
+**Future Enhancement**: A user-friendly GUI for managing execution order is planned for future releases.
 
 ## 📝 Schema Format
 
