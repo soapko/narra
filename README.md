@@ -1,6 +1,6 @@
-# Narra - Schema-Driven Narrative Construction Framework
+# Narra - Schema-Driven Narrative Construction CLI Framework
 
-Narra transforms LLM narrative generation from a linear process into a structured, schema-driven approach that simulates the planning and forethought that real writers employ. Instead of generating stories sequentially, Narra breaks complex narratives into interconnected schema chunks that build upon each other, creating a "diffusion model" approach to storytelling.
+Narra is a Python command-line tool that transforms LLM narrative generation from a linear process into a structured, schema-driven approach that simulates the planning and forethought that real writers employ. Instead of generating stories sequentially, Narra breaks complex narratives into interconnected schema chunks that build upon each other, creating a "diffusion model" approach to storytelling.
 
 ## 🌟 Key Features
 
@@ -310,15 +310,6 @@ The setting is: A boutique consulting firm where employees work in cramped cubic
 ```
 
 **Key Innovation**: The evaluation system forces the AI to critique and actually rewrite content, ensuring subsequent schemas receive polished, final material rather than rough drafts.
-
-## 🌐 Deployment
-
-Narra includes Netlify configuration for web deployment:
-
-```bash
-netlify dev    # Local development
-netlify deploy # Deploy to production
-```
 
 ## 📚 Documentation
 

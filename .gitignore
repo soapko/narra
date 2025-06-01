@@ -6,8 +6,7 @@ narra-env/
 venv/
 env/
 
-# Generated Content
-content/
+# Generated Content Archives (keep main content/ for demo)
 content/_archive/
 
 # Schema Archives
@@ -70,3 +69,6 @@ yarn-error.log*
 # MacOS
 .AppleDouble
 .LSOverride
+
+# Local Netlify folder
+.netlify
