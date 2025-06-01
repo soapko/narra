@@ -10,6 +10,9 @@ env/
 content/
 content/_archive/
 
+# Schema Archives
+schemas/_archive/
+
 # System Files
 .DS_Store
 .DS_Store?
