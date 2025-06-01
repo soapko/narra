@@ -6,6 +6,8 @@ Narra transforms LLM narrative generation from a linear process into a structure
 
 - **Schema-Driven Generation**: Break narratives into logical, interdependent components
 - **Cross-Schema References**: Later schemas can reference and build upon earlier generated content
+- **Built-in Evaluation**: Three-step critique process ensures content quality and revision
+- **Markdown Output**: Human-readable .md files instead of JSON for better accessibility
 - **Configurable Pipeline**: Per-schema control of temperature, tokens, and model selection
 - **Domain Agnostic**: Extensible to any narrative domain requiring non-linear planning
 - **Leverage-First Approach**: Establish high-impact details first, then build complexity
@@ -50,8 +52,9 @@ To begin processing from a particular point in your pipeline, modify the last li
 tool.run_from_schema('setting_schema')
 
 # Use any schema from your execution order:
-tool.run_from_schema('characters_schema')  # Starts from characters onward
-tool.run_from_schema('evidence_schema')    # Starts from evidence onward
+tool.run_from_schema('characters_schema')    # Starts from characters onward
+tool.run_from_schema('relationships_schema') # Starts from relationships onward
+tool.run_from_schema('escalation_schema')    # Starts from escalation onward
 ```
 
 **Alternative programmatic usage:**
@@ -75,16 +78,20 @@ Narra addresses this by:
 3. **Leverage-First Generation**: High-impact details are established first, then refined through subsequent schemas
 4. **Cross-Referencing**: Later schemas can reference and expand upon earlier generated content
 
-### Example: Murder Mystery Pipeline
+### Example: Workplace Psychological Thriller Pipeline
 
 ```
-setting_schema → characters_schema → locations_schema → evidence_schema 
-    ↓                ↓                    ↓                 ↓
- Atmosphere    Deep Psychology    Investigation Sites   Crime Details
-    ↓                ↓                    ↓                 ↓
-        thecrime_schema → interrogate_schema → solve_schema
-             ↓                   ↓                ↓
-        Central Event      Character Dynamics    Resolution
+setting_schema → core_incident_schema → characters_schema → relationships_schema
+    ↓                    ↓                     ↓                     ↓
+Workplace Tension   Triggering Event   Psychological Depth   Hidden Alliances
+    ↓                    ↓                     ↓                     ↓
+secrets_schema → escalation_schema → clues_schema → confrontations_schema
+    ↓                    ↓                ↓                ↓
+Personal Stakes    Building Paranoia   Evidence Trails   Breaking Points
+    ↓                    ↓                ↓                ↓
+        revelation_schema → aftermath_schema
+             ↓                     ↓
+        Truth Unveiled       Consequences
 ```
 
 ## 🏗️ Architecture
@@ -101,25 +108,46 @@ setting_schema → characters_schema → locations_schema → evidence_schema
 ```
 schemas/              # Schema template definitions
 ├── setting_schema.txt
+├── core_incident_schema.txt
 ├── characters_schema.txt
-└── [domain]_schema.txt
+├── relationships_schema.txt
+├── secrets_schema.txt
+├── escalation_schema.txt
+├── clues_schema.txt
+├── confrontations_schema.txt
+├── revelation_schema.txt
+└── aftermath_schema.txt
 
-content/              # Generated outputs (not in repo)
-├── setting_content.json
-└── characters_content.json
+content/              # Generated markdown outputs (included for demo)
+├── setting_content.md
+├── core_incident_content.md
+├── characters_content.md
+├── relationships_content.md
+├── secrets_content.md
+├── escalation_content.md
+├── clues_content.md
+├── confrontations_content.md
+├── revelation_content.md
+└── aftermath_content.md
 
 docs/                 # Documentation
 └── app_overview.md   # Detailed architecture guide
 ```
 
-## 🎯 Current Implementation: Murder Mysteries
+## 🎯 Current Implementation: Workplace Psychological Thriller
 
-The included schemas demonstrate Narra's approach with a complete murder mystery generation system:
+The included schemas demonstrate Narra's approach with a complete workplace psychological thriller generation system:
 
-- **Setting**: Atmospheric foundation
-- **Characters**: Deep psychological profiles with motives and relationships
-- **Evidence**: Crime scene details and investigative elements  
-- **Plot Progression**: From discovery through resolution
+- **Setting**: Establishes workplace environment and inherent tensions
+- **Core Incident**: The triggering event that sets paranoia in motion
+- **Characters**: Deep psychological profiles with hidden motives
+- **Relationships**: Complex workplace dynamics and secret alliances
+- **Secrets**: Personal vulnerabilities that raise stakes
+- **Escalation**: Building paranoia and suspicious behavior
+- **Clues**: Ambiguous evidence and digital breadcrumbs
+- **Confrontations**: Key conflicts and character breakdowns
+- **Revelation**: The truth behind the psychological manipulation
+- **Aftermath**: Character consequences and emotional fallout
 
 ## 🛠️ Creating Your Own Schemas
 
@@ -177,13 +205,18 @@ Narra's power comes from starting with **highly leveraged details** that scaffol
    - Build upon character motivations and relationships
    - Create callbacks and foreshadowing
 
-### Example: Murder Mystery Leverage Strategy
+### Example: Workplace Psychological Thriller Leverage Strategy
 ```
-1. setting_schema     → Establishes atmosphere and constraints
-2. characters_schema  → Creates psychological foundation for all actions  
-3. evidence_schema    → Builds clues that reflect character psychology
-4. crime_schema       → Event that leverages character motivations
-5. resolution_schema  → Outcome that feels inevitable given foundations
+1. setting_schema         → Establishes workplace atmosphere and constraints
+2. core_incident_schema   → Creates triggering event that drives all paranoia
+3. characters_schema      → Psychological foundation for all character actions
+4. relationships_schema   → Complex dynamics that amplify tensions
+5. secrets_schema         → Personal stakes that make characters vulnerable
+6. escalation_schema      → Building paranoia leverages established secrets
+7. clues_schema           → Evidence trails that reflect character psychology
+8. confrontations_schema  → Conflicts inevitable given established dynamics
+9. revelation_schema      → Truth that explains all previous suspicious behavior
+10. aftermath_schema      → Consequences that feel earned from foundation
 ```
 
 ## 🔧 Creating New Domains
@@ -226,13 +259,13 @@ class ContentGenerationTool:
 
 **Future Enhancement**: A user-friendly GUI for managing execution order is planned for future releases.
 
-## 📝 Schema Format
+## 📝 Schema Format with Built-in Evaluation
 
 Each schema file contains:
 
 ```
 # Metadata
-Max tokens: 4096
+Max tokens: 1024
 Temperature: 0.8
 Model: gpt-4o
 
@@ -243,9 +276,40 @@ Your generation instructions here...
 
 ## Use this schema:
 ~~~
-Your output format template
+## Your Content Section:
+{your_content_fields}
+
+## Evaluation:
+1. Identify the single biggest flaw or weak point in the above content.
+2. Pinpoint any inconsistency or cliché that undermines tension.
+3. Rewrite the content above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+{revised_content}
+~~~
+
+---
+
+### Example:
+~~~
+## Setup - Workplace Setting:
+The setting is: A high-pressure tech startup with glass-walled offices...
+
+## Evaluation:
+1. Identify the single biggest flaw or weak point in the above content.
+   - The concept feels generic and lacks specific tension-building details.
+
+2. Pinpoint any inconsistency or cliché that undermines tension.
+   - Glass-walled offices are overused in workplace thrillers.
+
+3. Rewrite the content above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+The setting is: A boutique consulting firm where employees work in cramped cubicles under flickering fluorescent lights, while senior partners monitor productivity through mandatory screen-sharing software that tracks every keystroke and website visit.
 ~~~
 ```
+
+**Key Innovation**: The evaluation system forces the AI to critique and actually rewrite content, ensuring subsequent schemas receive polished, final material rather than rough drafts.
 
 ## 🌐 Deployment
 
