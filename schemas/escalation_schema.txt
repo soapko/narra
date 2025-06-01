@@ -18,7 +18,10 @@ Import relationship dynamics and secrets, then depict how suspicion, manipulatio
 ## Evaluation:
 1. Identify the single biggest flaw or weak point in the above content.
 2. Pinpoint any inconsistency or cliché that undermines its tension.
-3. Provide two specific, actionable revisions to heighten suspense and coherence.
+3. Rewrite the content above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+{revised_escalation}
 ~~~
 
 ---

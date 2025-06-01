@@ -20,7 +20,10 @@ Import the core incident and character profiles, then map out alliances, rivalri
 ## Evaluation:
 1. Identify the single biggest flaw or weak point in the above relationships and dynamics.
 2. Pinpoint any inconsistency or cliché that undermines tension.
-3. Provide two concrete, actionable revisions to heighten stakes and emotional resonance.
+3. Rewrite the content above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+{revised_relationships}
 ~~~
 
 ---

@@ -19,7 +19,10 @@ Import revelation content, then describe the psychological and professional fall
 ## Evaluation:
 1. Identify the single biggest flaw or weak point in the above content.
 2. Pinpoint any inconsistency or cliché that undermines its emotional resonance.
-3. Provide two specific, actionable revisions to deepen emotional impact and closure.
+3. Rewrite the content above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+{revised_aftermath}
 ~~~
 
 ---

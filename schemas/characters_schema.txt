@@ -44,7 +44,10 @@ Import the workplace setting and core incident, then generate four key character
 ## Evaluation:
 1. Identify the single biggest flaw or weak point in the above character profiles.
 2. Pinpoint any stereotype or cliché that weakens their individuality.
-3. Provide two concrete, actionable revisions to make these profiles more distinct and compelling.
+3. Rewrite the character profiles above, incorporating fixes for the identified flaws:
+
+## Revised Content:
+{revised_characters}
 ~~~
 
 ---
