@@ -332,7 +332,3 @@ MIT License - see LICENSE file for details
 
 - [Detailed Architecture Guide](docs/app_overview.md)
 - [OpenAI API Documentation](https://platform.openai.com/docs)
-
----
-
-*Narra represents a paradigm shift in AI-assisted narrative creation, enabling the construction of complex, interconnected stories that maintain coherence and intentionality throughout the generation process.*

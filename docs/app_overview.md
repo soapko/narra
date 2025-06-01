@@ -45,12 +45,12 @@ The framework follows a predefined execution order where each schema:
 1. Loads its configuration and template
 2. Processes include directives to incorporate previous content
 3. Generates new content via LLM API calls
-4. Saves structured output to JSON files for future reference
+4. Saves structured output to Markdown files for future reference
 
 ### Content Management
 
 - **Schemas Directory**: Template files defining generation rules (`schemas/`)
-- **Content Directory**: Generated JSON outputs (`content/`)
+- **Content Directory**: Generated Markdown outputs (`content/`)
 - **Cross-Referencing**: Automatic content inclusion and dependency resolution
 
 ## File Organization
@@ -62,9 +62,9 @@ The framework follows a predefined execution order where each schema:
 │   └─ [domain]_schema.txt
 │
 ├─ content/               ← Generated content outputs
-│   ├─ setting_content.json
-│   ├─ characters_content.json  
-│   └─ [domain]_content.json
+│   ├─ setting_content.md
+│   ├─ characters_content.md  
+│   └─ [domain]_content.md
 │
 ├─ _archive/              ← Historical schema versions
 ├─ docs/                  ← Documentation and decisions
@@ -95,7 +95,7 @@ The framework follows a predefined execution order where each schema:
 
 ## Domain Extensibility
 
-While the current implementation focuses on murder mystery generation, Narra's architecture supports any narrative domain requiring non-linear planning:
+While the current implementation focuses on workplace psychological thriller generation, Narra's architecture supports any narrative domain requiring non-linear planning:
 
 ### Potential Applications
 - **Fantasy Epics**: World-building, character arcs, plot threads
@@ -111,22 +111,27 @@ While the current implementation focuses on murder mystery generation, Narra's a
 3. **Establish Dependencies**: Map cross-references between schemas using include directives
 4. **Configure Execution Order**: Set up the pipeline sequence in the main tool
 
-## Current Implementation: Murder Mystery
+## Current Implementation: Workplace Psychological Thriller
 
-The murder mystery domain serves as a reference implementation demonstrating:
+The workplace psychological thriller domain demonstrates:
 
 ### Schema Progression
-1. **Setting**: Establish atmospheric foundation
-2. **Characters**: Develop psychological profiles and relationships  
-3. **Reports/Locations**: Build investigative context
-4. **Evidence/Crime**: Construct central mystery elements
-5. **Interrogation**: Create character interactions
-6. **Resolution Phases**: Progressive revelation and solving
+1. **Setting**: Establish workplace environment and tensions
+2. **Core Incident**: Define triggering event
+3. **Characters**: Develop psychological profiles with hidden motives
+4. **Relationships**: Map workplace dynamics and alliances
+5. **Secrets**: Establish personal vulnerabilities
+6. **Escalation**: Build paranoia and suspicious behavior
+7. **Clues**: Generate ambiguous evidence trails
+8. **Confrontations**: Create character conflicts
+9. **Revelation**: Unveil truth behind manipulation
+10. **Aftermath**: Show consequences and fallout
 
 ### Leverage Patterns
-- Characters established with high-impact psychological details first
-- Evidence and motives built upon character foundations
-- Resolution schemas reference all previous content for coherent conclusions
+- Workplace tensions established first to constrain all character actions
+- Characters built with psychological depth that drives later conflicts
+- Secrets and relationships interconnect to amplify paranoia
+- Resolution schemas reference all previous content for narrative coherence
 
 ## API Integration
 
@@ -154,35 +159,13 @@ Use `run_from_schema()` method to regenerate content from any point in the pipel
 - **Multi-Domain Support**: Framework extensions for handling multiple narrative types simultaneously
 - **Interactive Schema Designer**: GUI tools for creating and testing new schema sequences
 - **Content Validation**: Automated checking of cross-references and narrative consistency
-- **Export Formats**: Support for various output formats beyond JSON
+- **Export Formats**: Support for various output formats beyond Markdown
 - **Collaborative Features**: Multi-user schema development and content generation
-
-## Configuration
-
-### Netlify Deployment Support
-
-```toml
-# netlify.toml — minimum viable scaffold
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-  external_node_modules = ["express"]
-
-[[redirects]]
-  from = "/api/*"
-  to   = "/.netlify/functions/api/:splat"
-  status = 200
-  force  = true
-```
-
-**Hosting**: netlify
 
 ## Getting Started
 
 1. **Install Dependencies**: Set up Python environment with OpenAI library
 2. **Configure API**: Set OpenAI API key in environment
-3. **Choose Domain**: Use existing murder mystery or create new schema set
+3. **Choose Domain**: Use existing workplace psychological thriller or create new schema set
 4. **Execute Pipeline**: Run `tool.run_from_schema('schema_name')` to generate content
 5. **Iterate**: Modify schemas and regenerate as needed
-
-Narra represents a paradigm shift in AI-assisted narrative creation, enabling the construction of complex, interconnected stories that maintain coherence and intentionality throughout the generation process.
