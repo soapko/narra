@@ -26,13 +26,13 @@ class DriveStorageManager:
         else:
             label += "_content"
 
-        file_path = os.path.join(self.base_drive_path, "content", f"{label}.json")
+        file_path = os.path.join(self.base_drive_path, "content", f"{label}.md")
         with open(file_path, 'w') as f:
-            json.dump(data, f)
+            f.write(data)
 
     def read_from_drive(self, label, folder="content"):
         # Correct the filename based on the folder
-        extension = "json" if folder == "content" else "txt"
+        extension = "md" if folder == "content" else "txt"
         file_path = os.path.join(self.base_drive_path, folder, f"{label}.{extension}")
 
         if os.path.exists(file_path):
@@ -123,14 +123,10 @@ class SchemaExecutor:
             included_content = self.storage_manager.read_from_drive(label, folder=folder)
 
             if included_content:
-                # Properly include content read from JSON files
+                # Content files are now plain text, no JSON parsing needed
                 if folder == "content":
-                    try:
-                        content_json = json.loads(included_content)
-                        if "content" in content_json:
-                            included_content = content_json["content"]
-                    except json.JSONDecodeError:
-                        print(f"Warning: Could not decode JSON for {label}")
+                    # Use content directly as it's now plain text/markdown
+                    pass
                 # If the included file is a schema, extract only the desired portion
                 elif folder == "schemas":
                     match = re.search(r"## Use this schema:\s*~~~(.*?)~~~", included_content, re.DOTALL)
@@ -167,7 +163,7 @@ class SchemaExecutor:
                 )
 
                 generated_content = chat_completion.choices[0].message.content
-                self.storage_manager.save_to_drive(schema_label, {"content": generated_content})
+                self.storage_manager.save_to_drive(schema_label, generated_content)
                 return generated_content
             except Exception as e:
                 print(f"API call failed. Retrying in {RETRY_DELAY} seconds. Error: {e}")
