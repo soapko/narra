@@ -1,14 +1,19 @@
-from openai import OpenAI
-
-client = OpenAI()
-
+from dotenv import load_dotenv
 import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+from openai import OpenAI
 import json
 import re
 import time
 
+# Initialize OpenAI client (will use OPENAI_API_KEY from environment)
+client = OpenAI()
+
 # Define paths and API key
-BASE_DRIVE_PATH = '../Narra'  # Adjust this path as needed for your local setup
+BASE_DRIVE_PATH = '.'  # Current directory
 
 class DriveStorageManager:
     def __init__(self, base_drive_path):
@@ -177,8 +182,7 @@ class ContentGenerationTool:
         self.storage_manager = DriveStorageManager(base_drive_path)
         self.schema_manager = SchemaManager(base_drive_path)
         self.executor = SchemaExecutor(self.storage_manager, self.schema_manager)
-        # self.execution_order = ["setting_schema","characters_schema","reports_schema","locations_schema","evidence_schema","thecrime_schema","newevidence_schema", "overview_schema","interrogate_schema","solve1_schema","twist1_schema","all_evidence_schema","solve2_schema","solve3_schema"]
-        self.execution_order = ["setting_schema","characters_schema","reports_schema","locations_schema","evidence_schema","thecrime_schema","newevidence_schema","interrogate_schema","solve1_schema","twist1_schema","all_evidence_schema"]
+        self.execution_order = ["setting_schema","characters_schema","reports_schema","locations_schema","evidence_schema","thecrime_schema","newevidence_schema", "overview_schema","interrogate_schema","solve1_schema","twist1_schema","all_evidence_schema","solve2_schema","solve3_schema"]
 
 
     def run_from_schema(self, start_label):
@@ -203,4 +207,4 @@ class ContentGenerationTool:
 tool = ContentGenerationTool(BASE_DRIVE_PATH)
 
 # Run the tool from a specific schema
-tool.run_from_schema('all_evidence_schema')
+tool.run_from_schema('setting_schema')
